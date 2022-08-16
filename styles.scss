@@ -2,3 +2,128 @@
     padding: 0;
     margin: 0;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    height: 100vh;
+}
+
+#past-output{
+    grid-area: past-output;
+}
+
+#current-output{
+    grid-area: current-output;
+}
+
+#all-clear{
+    grid-area: AC;
+}
+
+#sign{
+    grid-area: sign;
+}
+
+#percent{
+    grid-area: per;
+}
+
+#divide{
+    grid-area: div;
+}
+
+#multiply{
+    grid-area: mul;
+}
+
+#add{
+    grid-area: plus;
+}
+
+#subtract{
+    grid-area: subt;
+}
+
+#decimal{
+    grid-area: dec;
+}
+
+#equals{
+    grid-area: equals;
+}
+
+#zero{
+    grid-area: nil;
+}
+
+#one{
+    grid-area: one;
+}
+
+#two{
+    grid-area: two;
+}
+
+#three{
+    grid-area: three;
+}
+
+#four{
+    grid-area: four;
+}
+
+#five{
+    grid-area: five;
+}
+
+#six{
+    grid-area: six;
+}
+
+#seven{
+    grid-area: seven;
+}
+
+#eight{
+    grid-area: eight;
+}
+
+#nine{
+    grid-area: nine;
+}
+
+.display{
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid black;
+}
+
+.calculator{
+    background-color: purple;
+    display: grid;
+    width: 360px;
+    aspect-ratio: 0.5;
+    border: 0.2rem solid black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'past-output past-output past-output past-output' 
+    'current-output current-output current-output current-output'
+    'AC sign per div'
+    'seven eight nine mul'
+    'four five six subt'
+    'one two three plus'
+    'nil nil dec equals';
+}
+
+h3{
+    color: white;
+}
