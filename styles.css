@@ -16,6 +16,9 @@ body {
 }
 
 #current-output {
+  display: flex;
+  justify-content: end;
+  align-items: center;
   grid-area: current-output;
 }
 
@@ -95,12 +98,24 @@ body {
   grid-area: nine;
 }
 
+h2 {
+  color: white;
+  font-size: 3rem;
+}
+
 .display {
   display: flex;
   justify-content: end;
 }
 
-.button {
+.button--number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid black;
+}
+
+.button--operation {
   display: flex;
   align-items: center;
   justify-content: center;
