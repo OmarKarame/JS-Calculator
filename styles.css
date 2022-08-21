@@ -1,138 +1,64 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
+  background-color: purple;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
   height: 100vh;
+  padding: auto auto;
 }
 
-#past-output {
-  grid-area: past-output;
-}
-
-#current-output {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  grid-area: current-output;
-}
-
-#all-clear {
-  grid-area: AC;
-}
-
-#sign {
-  grid-area: sign;
-}
-
-#percent {
-  grid-area: per;
-}
-
-#divide {
-  grid-area: div;
-}
-
-#multiply {
-  grid-area: mul;
-}
-
-#add {
-  grid-area: plus;
-}
-
-#subtract {
-  grid-area: subt;
-}
-
-#decimal {
-  grid-area: dec;
-}
-
-#equals {
-  grid-area: equals;
-}
-
-#zero {
-  grid-area: nil;
-}
-
-#one {
-  grid-area: one;
-}
-
-#two {
-  grid-area: two;
-}
-
-#three {
-  grid-area: three;
-}
-
-#four {
-  grid-area: four;
-}
-
-#five {
-  grid-area: five;
-}
-
-#six {
-  grid-area: six;
-}
-
-#seven {
-  grid-area: seven;
-}
-
-#eight {
-  grid-area: eight;
-}
-
-#nine {
-  grid-area: nine;
-}
-
-h2 {
-  color: white;
-  font-size: 3rem;
-}
-
-.display {
-  display: flex;
-  justify-content: end;
-}
-
-.button--number {
+section {
+  background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.2rem solid black;
-}
-
-.button--operation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.2rem solid black;
 }
 
 .calculator {
-  background-color: purple;
-  display: grid;
-  width: 360px;
-  aspect-ratio: 0.5;
-  border: 0.2rem solid black;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "past-output past-output past-output past-output" "current-output current-output current-output current-output" "AC sign per div" "seven eight nine mul" "four five six subt" "one two three plus" "nil nil dec equals";
+  width: 400px;
+  box-shadow: 0px 0px 43px 17px #999999;
 }
 
-h3 {
+#display {
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  padding: 16px 8px;
+  font-size: 25px;
+}
+
+.buttons {
+  display: grid;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons > div {
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+.button {
+  border: 0.5px solid #999;
+  line-height: 100px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#equal {
+  background-color: #5555ff;
   color: white;
+}
+
+.button:hover {
+  background-color: #323330;
+  color: white;
+  transition: 0.5s ease-in-out;
 }
