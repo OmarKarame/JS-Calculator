@@ -58,14 +58,15 @@ buttons.map( button => {
                     opSelected = false;
                     break;
                 }
-                else if (operation === "/") {
+                else if (operation == "/") {
                     display.innerHTML = parseFloat(previousNumber) / parseFloat(laterNumber);
                     opSelected = false;
                     break;
                 }
-                else if (operation === "*"){
+                else if (operation == "*"){
                     display.innerHTML = parseFloat(previousNumber) * parseFloat(laterNumber);
                     opSelected = false;
+                    break;
                 }
             case 'C':
                 if (display.innerText){
