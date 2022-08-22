@@ -17,11 +17,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 45px;
 }
 
 .calculator {
   width: 400px;
-  box-shadow: 0px 0px 43px 17px #999999;
+  box-shadow: 0px 0px 43px 17px pink;
+  border-radius: 45px;
+  border: 6px solid black;
 }
 
 #previous-display {
@@ -33,23 +36,29 @@ section {
 }
 
 #display {
+  background-color: white;
   text-align: right;
   height: 70px;
   line-height: 70px;
   padding: 16px 8px;
   font-size: 25px;
+  border: 3px solid black;
+  border-radius: 45px;
+  margin: 7px 0px;
 }
 
 .buttons {
   display: grid;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #999;
+  padding: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-radius: 45px;
 }
 
 .buttons > div {
-  border-top: 1px solid #999;
-  border-right: 1px solid #999;
+  background-color: white;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  border-radius: 45px;
 }
 
 .button {
