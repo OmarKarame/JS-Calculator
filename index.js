@@ -70,30 +70,35 @@ buttons.map( button => {
                     previousDisplay.innerHTML = "";
                     display.innerHTML = parseFloat(previousNumber) + parseFloat(laterNumber);
                     opSelected = false;
+                    previousNumber = display.innerHTML;
                     break;
                 }
                 else if (operation == "-"){
                     previousDisplay.innerHTML = "";
                     display.innerHTML = parseFloat(previousNumber) - parseFloat(laterNumber);
                     opSelected = false;
+                    previousNumber = display.innerHTML;
                     break;
                 }
                 else if (operation == "/") {
                     previousDisplay.innerHTML = "";
                     display.innerHTML = parseFloat(previousNumber) / parseFloat(laterNumber);
                     opSelected = false;
+                    previousNumber = display.innerHTML;
                     break;
                 }
                 else if (operation == "*"){
                     previousDisplay.innerHTML = "";
                     display.innerHTML = parseFloat(previousNumber) * parseFloat(laterNumber);
                     opSelected = false;
+                    previousNumber = display.innerHTML;
                     break;
                 }
                 else if (operation == "%"){
                     previousDisplay.innerHTML = "";
                     display.innerHTML = parseFloat(previousNumber) / 100 * parseFloat(laterNumber);
                     opSelected = false;
+                    previousNumber = display.innerHTML;
                     break;
                 }
                 else{
