@@ -23,13 +23,9 @@ buttons.map(function (button) {
           display.innerHTML += e.target.innerHTML;
           isDecimal = true;
           break;
-        } // else if (display.innerHTML - Math.floor(n) !== 0){
-        //     isDecimal = false;
-        //     break;
-        // }
-        else {
-            break;
-          }
+        } else {
+          break;
+        }
 
       case '+':
         operation = "+";
