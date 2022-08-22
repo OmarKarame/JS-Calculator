@@ -23,10 +23,10 @@ buttons.map( button => {
                     isDecimal = true;
                     break;
                 }
-                else if (display.innerHTML - Math.floor(n) !== 0){
-                    isDecimal = false;
-                    break;
-                }
+                // else if (display.innerHTML - Math.floor(n) !== 0){
+                //     isDecimal = false;
+                //     break;
+                // }
                 else{
                     break;
                 }
