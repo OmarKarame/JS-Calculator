@@ -1,4 +1,60 @@
-// let previousNumber = 0;
+"use strict";
+
+var previousNumber = 0;
+var laterNumber = 0;
+var opSelected = false;
+var isDecimal = false;
+var operation = "";
+var display = document.getElementById('display');
+var buttons = Array.from(document.getElementsByClassName('button'));
+buttons.map(function (button) {
+  button.addEventListener('click', function (e) {
+    switch (e.target.innerText) {
+      case 'AC':
+        display.innerText = '';
+        isDecimal = false;
+        break;
+
+      case '.':
+        if (isDecimal == false) {
+          display.innerHTML += e.target.innerHTML;
+          isDecimal = true;
+          break;
+        } else {
+          break;
+        }
+
+      case '+':
+        display.innerHTML = '';
+        operation = "+";
+        opSelected = true;
+
+      case '=': // try{
+      //     display.innerText = eval(display.innerText);
+      // } catch {
+      //     display.innerText = "Error"
+      // }
+      // break;
+
+      case '←':
+        if (display.innerText) {
+          display.innerText = display.innerText.slice(0, -1);
+        }
+
+        break;
+
+      default:
+        if (opSelected == false) {
+          display.innerText += e.target.innerText;
+          previousNumber = display.innerHTML;
+        } else {
+          display.innerHTML = e.target.innerText;
+          laterNumber = display.innerHTML;
+        }
+
+    }
+  });
+}); // let previousNumber = 0;
 // let operatorSelect = false;
 // let operator = "";
 // class Calculator{
@@ -86,4 +142,3 @@
 //     document.getElementById("current-equation").innerHTML = previousNumber;
 //     return parseFloat(previousNumber);
 // });
-"use strict";
