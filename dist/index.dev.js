@@ -13,6 +13,7 @@ buttons.map(function (button) {
     switch (e.target.innerText) {
       case 'AC':
         display.innerText = '';
+        previousDisplay.innerHTML = '';
         previousNumber = 0;
         laterNumber = 0;
         isDecimal = false;
