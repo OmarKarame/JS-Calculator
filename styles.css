@@ -22,7 +22,7 @@ section {
 
 .calculator {
   width: 400px;
-  box-shadow: 0px 0px 43px 17px pink;
+  box-shadow: 0px 0px 43px 7px black;
   border-radius: 45px;
   border: 6px solid black;
 }
