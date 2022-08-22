@@ -6,12 +6,15 @@ var opSelected = false;
 var isDecimal = false;
 var operation = "";
 var display = document.getElementById('display');
+var previousDisplay = document.getElementById('previous-display');
 var buttons = Array.from(document.getElementsByClassName('button'));
 buttons.map(function (button) {
   button.addEventListener('click', function (e) {
     switch (e.target.innerText) {
       case 'AC':
         display.innerText = '';
+        previousNumber = 0;
+        laterNumber = 0;
         isDecimal = false;
         break;
 
@@ -25,8 +28,9 @@ buttons.map(function (button) {
         }
 
       case '+':
-        display.innerHTML = '';
         operation = "+";
+        previousDisplay.innerHTML = previousNumber + operation;
+        display.innerHTML = '';
         opSelected = true;
         isDecimal = false;
         break;
@@ -34,6 +38,7 @@ buttons.map(function (button) {
       case '-':
         display.innerHTML = '';
         operation = "-";
+        previousDisplay.innerHTML = previousNumber + operation;
         opSelected = true;
         isDecimal = false;
         break;
@@ -41,6 +46,7 @@ buttons.map(function (button) {
       case '/':
         display.innerHTML = '';
         operation = "/";
+        previousDisplay.innerHTML = previousNumber + operation;
         opSelected = true;
         isDecimal = false;
         break;
@@ -48,26 +54,51 @@ buttons.map(function (button) {
       case '*':
         display.innerHTML = '';
         operation = "*";
+        previousDisplay.innerHTML = previousNumber + operation;
         opSelected = true;
         isDecimal = false;
         break;
 
+      case '%':
+        display.innerHTML = '';
+        operation = "%";
+        previousDisplay.innerHTML = previousNumber + operation;
+        opSelected = true;
+        isDecimal = false;
+        break;
+
+      case '+/-':
+        display.innerHTML = parseFloat(previousNumber) - 2 * parseFloat(previousNumber);
+        previousNumber = display.innerHTML;
+        break;
+
       case '=':
         if (operation == "+") {
+          previousDisplay.innerHTML = "";
           display.innerHTML = parseFloat(previousNumber) + parseFloat(laterNumber);
           opSelected = false;
           break;
         } else if (operation == "-") {
+          previousDisplay.innerHTML = "";
           display.innerHTML = parseFloat(previousNumber) - parseFloat(laterNumber);
           opSelected = false;
           break;
         } else if (operation == "/") {
+          previousDisplay.innerHTML = "";
           display.innerHTML = parseFloat(previousNumber) / parseFloat(laterNumber);
           opSelected = false;
           break;
         } else if (operation == "*") {
+          previousDisplay.innerHTML = "";
           display.innerHTML = parseFloat(previousNumber) * parseFloat(laterNumber);
           opSelected = false;
+          break;
+        } else if (operation == "%") {
+          previousDisplay.innerHTML = "";
+          display.innerHTML = parseFloat(previousNumber) / 100 * parseFloat(laterNumber);
+          opSelected = false;
+          break;
+        } else {
           break;
         }
 
