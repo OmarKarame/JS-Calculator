@@ -18,7 +18,11 @@ buttons.map( button => {
                 isDecimal = false;
                 break;
             case '.':
-                if(isDecimal == false){
+                if (display.innerHTML - Math.floor(n) !== 0){
+                    isDecimal = false;
+                    break;
+                }
+                else if(isDecimal == false){
                     display.innerHTML += e.target.innerHTML;
                     isDecimal = true;
                     break;
